@@ -96,7 +96,7 @@ if [ -z "${LOCAL_APT_MIRROR}" ]; then
 fi
 
 # parse apt mirror
-MIRROR=$(printf "${LOCAL_APT_MIRROR}\n" | awk '/deb /{print $2}' | head -n1)
+MIRROR=http://archive.debian.org/debian/
 DIST=$(printf "${LOCAL_APT_MIRROR}\n" | awk '/deb /{print $3}' | head -n1)
 
 # create chroot
